@@ -1,0 +1,31 @@
+<!-- <header>
+  <div>
+    Logo
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/home" rel="noopener noreferrer">Home</a>
+      </li>
+      <li>
+        <a routerLink="/albums">Albums</a>
+      </li>
+      <li>
+        <a routerLink="/songs">Songs</a>
+      </li>
+    </ul>
+  </nav>
+</header> -->
+<header class="sidebar">
+  <nav class="nav__container">
+    <div>
+      <a routerLink="/home" rel="noopener noreferrer">Logo</a>
+    </div>
+    <ul class="nav__links">
+      <li *ngFor="let link of links" >
+        <a [routerLink]="link.path" rel="noopener noreferrer">{{link.name}}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
