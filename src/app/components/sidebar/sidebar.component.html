@@ -16,14 +16,21 @@
     </ul>
   </nav>
 </header> -->
-<header class="sidebar">
+<header class="sidebar" [style.width.px]="showNames ? 200 : 70" >
   <nav class="nav__container">
-    <div>
-      <a routerLink="/home" rel="noopener noreferrer">Logo</a>
+    <div class="nav__logo">
+      <!-- <a class="logo" routerLink="/home" rel="noopener noreferrer">App</a> -->
+      <button (click)="toggleNames()" >
+        <mat-icon *ngIf="showNames===true" >keyboard_double_arrow_left</mat-icon>
+        <mat-icon *ngIf="showNames===false">keyboard_double_arrow_right</mat-icon>
+      </button>
     </div>
     <ul class="nav__links">
       <li *ngFor="let link of links" >
-        <a [routerLink]="link.path" rel="noopener noreferrer">{{link.name}}</a>
+        <a [routerLink]="link.path" routerLinkActive="active" rel="noopener noreferrer">
+          <mat-icon>{{link.icon}}</mat-icon>
+          <span *ngIf="showNames" >{{link.name}}</span>
+        </a>
       </li>
     </ul>
   </nav>

@@ -8,19 +8,26 @@ import { Component } from '@angular/core';
 export class SidebarComponent {
   links:{icon:string, name:string, path:string}[] = [
     {
-      icon: '',
+      icon: 'home',
       name: 'Home',
       path: '/home',
     },
     {
-      icon: '',
+      icon: 'album',
       name: 'Albums',
       path: '/albums',
     },
     {
-      icon: '',
+      icon: 'library_music',
       name: 'Songs',
       path: '/songs',
     }
   ]
+
+  showNames = true;
+
+  toggleNames(){
+    this.showNames = !this.showNames;
+  }
+
 }

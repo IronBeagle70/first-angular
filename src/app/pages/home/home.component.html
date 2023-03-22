@@ -1,1 +1,21 @@
-<p>home works!</p>
+<p>Welcome!</p>
+
+<div>
+  <ul>
+    <li *ngFor="let album of albums">
+      <div>
+        <h1>{{album.title}}</h1>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let song of songs">
+      <div>
+        <h1>{{song.title}}</h1>
+      </div>
+    </li>
+  </ul>
+</div>
