@@ -1,1 +1,13 @@
-<p>albums works!</p>
+<h1 class="welcome">All Albums</h1>
+
+<div class="albums">
+  <ul class="albums__list">
+    <li class="albums__item" *ngFor="let album of albums">
+      <div [routerLink]="['/albums', album.id]" class="albums__item__container" >
+        <img class="album__img" width="100" [src]="album.coverImage" alt="album">
+        <h2 class="album__title" >{{album.title}}</h2>
+        <mat-icon class="album__icon" >play_circle</mat-icon>
+      </div>
+    </li>
+  </ul>
+</div>

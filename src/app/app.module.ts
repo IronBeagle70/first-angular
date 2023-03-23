@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
 import { SongsComponent } from './pages/songs/songs.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AlbumDetailComponent } from './pages/album-detail/album-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HomeComponent,
     AlbumsComponent,
     SongsComponent,
-    SidebarComponent
+    SidebarComponent,
+    AlbumDetailComponent
   ],
   imports: [
     BrowserModule,

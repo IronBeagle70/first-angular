@@ -1,1 +1,12 @@
-<p>songs works!</p>
+<h1 class="welcome">All The Songs</h1>
+
+<div class="songs">
+  <ul class="songs__list">
+    <li class="songs__item" *ngFor="let song of songs">
+      <div class="songs__item__container">
+        <h3 class="songs__title" >{{song.title}}</h3>
+        <mat-icon class="album__icon" >play_circle</mat-icon>
+      </div>
+    </li>
+  </ul>
+</div>
