@@ -12,4 +12,9 @@ export class AppComponent {
   title = 'angular-app';
   albums: Album[] = albums;
   songs: Song[] = albums.flatMap(a=>a.songs);
+  showNames = false;
+
+  toggleNames(){
+    this.showNames = !this.showNames;
+  }
 }

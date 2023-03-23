@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+
   links:{icon:string, name:string, path:string}[] = [
     {
       icon: 'home',
@@ -24,10 +25,11 @@ export class SidebarComponent {
     }
   ]
 
-  showNames = true;
+  @Input() showNames!:boolean;
+  @Output() toggleNames = new EventEmitter<void>();
 
-  toggleNames(){
-    this.showNames = !this.showNames;
+  change(){
+    this.toggleNames.emit();
   }
 
 }

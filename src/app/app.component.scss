@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  background-color: #121212;
 }
 
 .app-sidebar {
@@ -10,17 +11,14 @@
 }
 
 .page-container {
-  margin-left: 210px;
-  padding: 20px;
-  width: calc(100% - 200px);
+  margin-left: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  width: calc(100% - 70px);
+  @media screen and (max-width: 450px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
-
-// .container {
-//   display: flex;
-// }
-
-// .page-container {
-//   flex: 1;
-//   padding: 20px;
-// }
 

@@ -1,16 +1,18 @@
-<p>Welcome!</p>
+<h1 class="welcome">Welcome!</h1>
 
-<div>
-  <ul>
-    <li *ngFor="let album of albums">
+<div class="albums">
+  <ul class="albums__list">
+    <li class="albums__item" *ngFor="let album of albums">
       <div>
-        <h1>{{album.title}}</h1>
+        <img class="album__img" width="100" [src]="album.coverImage" alt="album">
+        <h2 class="album__title" >{{album.title}}</h2>
+        <mat-icon class="album__icon" >play_circle</mat-icon>
       </div>
     </li>
   </ul>
 </div>
 
-<div>
+<!-- <div class="songs__container">
   <ul>
     <li *ngFor="let song of songs">
       <div>
@@ -18,4 +20,4 @@
       </div>
     </li>
   </ul>
-</div>
+</div> -->

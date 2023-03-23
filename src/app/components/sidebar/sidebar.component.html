@@ -1,30 +1,12 @@
-<!-- <header>
-  <div>
-    Logo
-  </div>
-  <nav>
-    <ul>
-      <li>
-        <a routerLink="/home" rel="noopener noreferrer">Home</a>
-      </li>
-      <li>
-        <a routerLink="/albums">Albums</a>
-      </li>
-      <li>
-        <a routerLink="/songs">Songs</a>
-      </li>
-    </ul>
-  </nav>
-</header> -->
 <header class="sidebar" [style.width.px]="showNames ? 200 : 70" >
   <nav class="nav__container">
-    <div class="nav__logo">
-      <!-- <a class="logo" routerLink="/home" rel="noopener noreferrer">App</a> -->
-      <button (click)="toggleNames()" >
+    <div class="nav__logo" [ngStyle]="{'justify-content': showNames ? 'flex-end' : 'center'}" >
+      <button (click)="change()" >
         <mat-icon *ngIf="showNames===true" >keyboard_double_arrow_left</mat-icon>
         <mat-icon *ngIf="showNames===false">keyboard_double_arrow_right</mat-icon>
       </button>
     </div>
+
     <ul class="nav__links">
       <li *ngFor="let link of links" >
         <a [routerLink]="link.path" routerLinkActive="active" rel="noopener noreferrer">

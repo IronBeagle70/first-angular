@@ -1,11 +1,9 @@
-<!-- <app-sidebar></app-sidebar>
-<div>
-  <router-outlet></router-outlet>
-</div> -->
-
-
 <div class="container">
-  <app-sidebar></app-sidebar>
+  <app-sidebar
+    [showNames]="showNames"
+    (toggleNames)="toggleNames()">
+  </app-sidebar>
+
   <div class="page-container">
     <router-outlet></router-outlet>
   </div>
