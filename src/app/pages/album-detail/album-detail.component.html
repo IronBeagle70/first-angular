@@ -1,3 +1,5 @@
+<mat-icon class="return__icon" routerLink="home" >arrow_back</mat-icon>
+
 <div class="detail" *ngIf="album">
   <div class="album__detail">
     <div class="img__container">
@@ -7,7 +9,12 @@
       <span>Álbum</span>
       <h1>{{ album.title }}</h1>
       <div>
-        <h2><span>{{ album.artist }}</span> . {{album.releaseDate}} . {{album.songs.length}} songs</h2>
+        <h2>
+          <span>
+            {{ album.artist }}
+          </span>
+          . {{album.releaseDate}} . {{album.songs.length}} songs
+        </h2>
       </div>
     </section>
   </div>
@@ -15,11 +22,19 @@
     <ul class="song__detail__list">
       <li class="song__detail__item" *ngFor="let song of album.songs">
         <div>
-          <span class="song__track">{{song.trackNumber}}</span>
-          <mat-icon class="song__icon">play_arrow</mat-icon>
-          <span>{{ song.title }}</span>
+          <span class="song__track">
+            {{song.trackNumber}}
+          </span>
+          <mat-icon class="song__icon">
+            play_arrow
+          </mat-icon>
+          <span>
+            {{ song.title }}
+          </span>
         </div>
-        <span>{{ song.duration }}</span>
+        <span>
+          {{ song.duration }}
+        </span>
       </li>
     </ul>
   </div>

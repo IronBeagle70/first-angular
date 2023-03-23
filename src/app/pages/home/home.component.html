@@ -5,8 +5,12 @@
     <li class="albums__item" *ngFor="let album of albums">
       <div [routerLink]="['/albums', album.id]" class="albums__item__container" >
         <img class="album__img" width="100" [src]="album.coverImage" alt="album">
-        <h2 class="album__title" >{{album.title}}</h2>
-        <mat-icon class="album__icon" >play_circle</mat-icon>
+        <h2 class="album__title" >
+          {{album.title}}
+        </h2>
+        <mat-icon class="album__icon" >
+          play_circle
+        </mat-icon>
       </div>
     </li>
   </ul>
@@ -18,8 +22,12 @@
   <ul class="songs__list">
     <li class="songs__item" *ngFor="let song of songs">
       <div class="songs__item__container">
-        <h3 class="songs__title" >{{song.title}}</h3>
-        <mat-icon class="album__icon" >play_circle</mat-icon>
+        <h3 class="songs__title" >
+          {{song.title}}
+        </h3>
+        <mat-icon class="album__icon" >
+          play_circle
+        </mat-icon>
       </div>
     </li>
   </ul>

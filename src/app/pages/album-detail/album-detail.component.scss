@@ -1,3 +1,18 @@
+.return__icon{
+  cursor: pointer;
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  margin-top: 0.625em;
+  @media screen and (max-width: 300px) {
+    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.5em;
+  }
+}
+
 .detail{
   color: #fff;
   width: 100%;
@@ -10,7 +25,6 @@
 .album__detail{
   display: flex;
   align-items: flex-end;
-  // justify-content: space-between;
   @media screen and (max-width: 650px) {
     flex-direction: column;
     align-items: center;
@@ -70,8 +84,6 @@
     }
     @media screen and (max-width: 300px) {
       font-size: 1rem;
-      // margin-bottom: 0.5em;
-      // margin-top: 0.5em;
     }
   }
   div{
@@ -152,8 +164,3 @@
   }
 }
 
-// .song__detail__item:hover .song__icon {
-//   display: none;
-//   opacity: 1;
-//   background-color: red;
-// }

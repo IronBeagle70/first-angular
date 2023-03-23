@@ -21,6 +21,5 @@ export class AlbumDetailComponent implements OnInit {
     const idParam = this.route.snapshot.paramMap.get('id');
     const id = idParam ? parseInt(idParam, 10) : 0;
     this.album = this.albums.find(album => album.id === id) ?? null;
-    // this.album = null
   }
 }
