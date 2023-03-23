@@ -6,7 +6,7 @@ export const albums: Album[] = [
     title: "Is This It",
     artist: "The Strokes",
     releaseDate: "27-08-2001",
-    coverImage: "../assets/images/is-this-it.jpg",
+    coverImage: "https://raw.githubusercontent.com/IronBeagle70/first-angular/main/src/assets/images/is-this-it.jpg",
     songs: [
       {
         id: 1,
@@ -33,7 +33,7 @@ export const albums: Album[] = [
     title: "Room on Fire",
     artist: "The Strokes",
     releaseDate: "28-10-2003",
-    coverImage: "../assets/images/room.jpg",
+    coverImage: "https://raw.githubusercontent.com/IronBeagle70/first-angular/main/src/assets/images/room.jpg",
     songs: [
       {
         id: 4,
@@ -60,7 +60,7 @@ export const albums: Album[] = [
     title: "First Impressions of Earth",
     artist: "The Strokes",
     releaseDate: "03-01-2006",
-    coverImage: "../assets/images/The-Strokes-First-Impressions-of-Earth.jpg",
+    coverImage: "https://raw.githubusercontent.com/IronBeagle70/first-angular/main/src/assets/images/The-Strokes-First-Impressions-of-Earth.jpg",
     songs: [
       {
         id: 7,
@@ -81,7 +81,7 @@ export const albums: Album[] = [
     title: "Angles",
     artist: "The Strokes",
     releaseDate: "22-03-2011",
-    coverImage: "../assets/images/angles.jpg",
+    coverImage: "https://raw.githubusercontent.com/IronBeagle70/first-angular/main/src/assets/images/angles.jpg",
     songs: [
       {
         id: 9,
@@ -96,7 +96,7 @@ export const albums: Album[] = [
     title: "Comedown Machine",
     artist: "The Strokes",
     releaseDate: "26-03-2013",
-    coverImage: "../assets/images/strokesrca.jpg",
+    coverImage: "https://raw.githubusercontent.com/IronBeagle70/first-angular/main/src/assets/images/strokesrca.jpg",
     songs: [
       {
         id: 10,
@@ -117,7 +117,7 @@ export const albums: Album[] = [
     title: "The New Abnormal",
     artist: "The Strokes",
     releaseDate: "10-04-2020",
-    coverImage: "../assets/images/The-Strokes-The-New-Abnormal.jpg",
+    coverImage: "https://raw.githubusercontent.com/IronBeagle70/first-angular/main/src/assets/images/The-Strokes-The-New-Abnormal.jpg",
     songs: [
       {
         id: 12,
