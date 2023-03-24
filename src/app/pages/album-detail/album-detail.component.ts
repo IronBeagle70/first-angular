@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { AppComponent } from 'src/app/app.component';
+import { StoreService } from 'src/app/services/store.service';
 import { Album } from 'src/interface/AlbumInterface';
+
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-album-detail',
@@ -10,16 +11,20 @@ import { Album } from 'src/interface/AlbumInterface';
 })
 export class AlbumDetailComponent implements OnInit {
 
-  albums: Album[];
   album!: Album | null;
-
-  constructor(private route: ActivatedRoute, private appComponent: AppComponent ){
-    this.albums = this.appComponent.albums;
+  
+  constructor( private route: ActivatedRoute, private storeService: StoreService ){
   }
 
   ngOnInit(): void{
+    const id = this.getRouteParam();
+    this.album = this.storeService.getAlbum(id);
+  }
+
+  getRouteParam(){
     const idParam = this.route.snapshot.paramMap.get('id');
     const id = idParam ? parseInt(idParam, 10) : 0;
-    this.album = this.albums.find(album => album.id === id) ?? null;
-  }
+    return id;
+  };
+
 }

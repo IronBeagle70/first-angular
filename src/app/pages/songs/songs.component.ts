@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
+import { StoreService } from 'src/app/services/store.service';
 import { Song } from 'src/interface/SongInterface';
 
 @Component({
@@ -9,7 +9,7 @@ import { Song } from 'src/interface/SongInterface';
 })
 export class SongsComponent {
   songs: Song[];
-  constructor(private appComponent: AppComponent){
-    this.songs = this.appComponent.songs;
+  constructor(private storeService: StoreService){
+    this.songs = this.storeService.getSongs();
   }
 }

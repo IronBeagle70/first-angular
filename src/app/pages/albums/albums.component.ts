@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
+import { StoreService } from 'src/app/services/store.service';
 import { Album } from 'src/interface/AlbumInterface';
 
 @Component({
@@ -9,7 +9,7 @@ import { Album } from 'src/interface/AlbumInterface';
 })
 export class AlbumsComponent {
   albums: Album[];
-  constructor(private appComponent: AppComponent){
-    this.albums = this.appComponent.albums;
+  constructor(private storeService: StoreService){
+    this.albums = this.storeService.getAlbums();
   }
 }

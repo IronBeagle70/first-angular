@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
+import { StoreService } from 'src/app/services/store.service';
 import { Album } from 'src/interface/AlbumInterface';
 import { Song } from 'src/interface/SongInterface';
 
@@ -12,20 +12,14 @@ export class HomeComponent implements OnInit {
   albums: Album[];
   songs: Song[];
 
-  constructor(private appComponent: AppComponent){
-    this.albums = this.appComponent.albums
-    this.songs = this.appComponent.songs;
+  constructor(private storeService: StoreService){
+    this.albums = this.storeService.getAlbums();
+    this.songs=this.storeService.getSongs();
   }
 
   ngOnInit(): void {
-    console.log(this.albums);
-    console.log(this.songs);
-
+    // console.log(this.albums);
+    // console.log(this.songs);
   }
-
-  // getSongs(){
-  //   this.songs = this.albums.flatMap(a=>a.songs);
-  // }
 }
-// routerLinkActive="estilos"
-// [routerLinkActiveOptions]="{exact: true}"
+
